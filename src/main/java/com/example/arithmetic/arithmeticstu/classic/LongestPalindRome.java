@@ -106,7 +106,7 @@ public class LongestPalindRome {
     public static String centerSpread(String s, int left, int right) {
         int i = left;
         int j = right;
-        while (i >= 0 && j <= s.length()) {
+        while (i >= 0 && j <= s.length() - 1) {
             if (s.charAt(i) == s.charAt(j)) {
                 i--;
                 j++;
