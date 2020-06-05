@@ -32,4 +32,36 @@ public class Arithmetic2020060403 {
         }
         return temp3.next;
     }
+
+    /***
+     * 使用双指针
+     * 1.需要一个哑结点
+     * 2.a指针和b指针
+     * 3.当a 指针指向的数据和b指针指向的数据不同时，同时移到下一个，
+     *   相同时。b指针指向下一个，直到不同为止。
+     *
+     *   总结：1.哑结点的设置
+     *
+     * @param head
+     * @return
+     */
+    public static ListNode deleteDuplicates1(ListNode head) {
+        ListNode tmpl = new ListNode(-1);
+        tmpl.next = head;
+        ListNode a = tmpl;
+        ListNode b = head;
+        while (b != null && b.next != null) {
+            if (a.next.val != b.next.val) {
+                a = a.next;
+                b = b.next;
+            } else {
+                while (b != null && b.next != null && a.next.val == b.next.val) {
+                    b = b.next;
+                }
+                a.next = b.next;
+                b = b.next;
+            }
+        }
+        return tmpl.next;
+    }
 }
