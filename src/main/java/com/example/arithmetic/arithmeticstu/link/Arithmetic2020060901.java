@@ -20,7 +20,11 @@ public class Arithmetic2020060901 {
         if (l1 == null) {
             return l2;
         }
-        ListNode temp = new ListNode(-1);
+        if (l2 == null) {
+            return l1;
+        }
+        ListNode dummyHead = new ListNode(-1);
+        ListNode temp = dummyHead;
         while (l1 != null && l2 != null) {
             if (l1.val <= l2.val) {
                 temp.next = l1;
@@ -32,6 +36,6 @@ public class Arithmetic2020060901 {
             temp = temp.next;
         }
         temp.next = l1 == null ? l2 : l1;
-        return temp.next;
+        return dummyHead.next;
     }
 }
