@@ -9,11 +9,36 @@ package com.example.arithmetic.arithmeticstu.link;
 public class Arithmetic2020060901 {
 
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode ans = null;
-        for (int i = 0; i < lists.length; i++) {
-            ans = mergeTwoKLists(ans, lists[i]);
+        if (lists == null || lists.length == 0) {
+            return null;
         }
-        return ans;
+        return merge(lists, 0, lists.length - 1);
+    }
+
+    //    public ListNode mergeKLists(ListNode[] lists) {
+    //        ListNode ans = null;
+    //        for (int i = 0; i < lists.length; i++) {
+    //            ans = mergeTwoKLists(ans, lists[i]);
+    //        }
+    //        return ans;
+    //    }
+
+    /**
+     * 二分法+递归
+     *
+     * @param lists
+     * @param left
+     * @param right
+     * @return
+     */
+    private ListNode merge(ListNode[] lists, int left, int right) {
+        if (left == right) {
+            return lists[left];
+        }
+        int mid = left + (right - left) / 2;
+        ListNode l1 = merge(lists, left, mid);
+        ListNode l2 = merge(lists, mid + 1, right);
+        return mergeTwoKLists(l1, l2);
     }
 
     public ListNode mergeTwoKLists(ListNode l1, ListNode l2) {
