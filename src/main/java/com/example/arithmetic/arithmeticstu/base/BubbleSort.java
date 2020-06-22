@@ -1,6 +1,5 @@
 package com.example.arithmetic.arithmeticstu.base;
 
-
 /**
  * 冒泡排序：比较前后两个相邻的数据，如果前面的数据大于后面的数据，就将两个数据作交换；
  * 遍历一遍之后，就将最大的数据沉到了最后面
@@ -20,6 +19,39 @@ public class BubbleSort {
     }
 
     public static int[] bubbleSort(int[] a) {
+        for (int i = 0; i < a.length; i++) {//控制循环的次数。
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                if (a[j] > a[j + 1]) {
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        return a;
+    }
+
+    public static int[] bubbleSort1(int[] a) {
+
+        boolean flag = false;//把已经排好顺序之后的循环省去了。
+        for (int i = 0; i < a.length; i++) {//控制循环的次数。
+            flag = false;
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                if (a[j] > a[j + 1]) {
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                break;
+            }
+        }
+        return a;
+    }
+
+    public static int[] learn0621(int[] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a.length - 1 - i; j++) {
                 if (a[j] > a[j + 1]) {
