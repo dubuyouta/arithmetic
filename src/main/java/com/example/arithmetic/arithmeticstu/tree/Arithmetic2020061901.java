@@ -1,8 +1,9 @@
 package com.example.arithmetic.arithmeticstu.tree;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/
@@ -13,39 +14,29 @@ import java.util.List;
 public class Arithmetic2020061901 {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> lists = new ArrayList<>();
-        int deepLength = deepth(root);
-
-        for (int i = 1; i <= deepLength; i++) {
-            leverOrder(root, i, lists);
-        }
-        Collections.reverse(lists);
-        return lists;
-    }
-
-    public static void leverOrder(TreeNode root, int level, List<List<Integer>> lists) {
-        if (root == null || level < 1) {
-            return;
-        }
-        if (level == 1) {
-            lists.get(level).add(root.val);
-            return;
-        }
-        leverOrder(root.left, level - 1, lists);
-        leverOrder(root.right, level - 1, lists);
-    }
-
-    public static int deepth(TreeNode root) {
+        List<List<Integer>> ans = new ArrayList<>();
         if (root == null) {
-            return 0;
+            return ans;
         }
-        int l = deepth(root.left);
-        int r = deepth(root.right);
-
-        if (l > r) {
-            return l + 1;
-        } else {
-            return r + 1;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            List<Integer> tmp = new ArrayList<>();
+            int len = q.size();
+            for (int i = 0; i < len; i++) {
+                TreeNode node = q.poll();
+                tmp.add(node.val);
+                if (node.left != null) {
+                    q.add(node.left);
+                }
+                if (node.right != null) {
+                    q.add(node.right);
+                }
+            }
+            // 在索引 0 的位置加入一维数组 tmp
+            // 每次新的数组进来都会被放在开始的位置
+            ans.add(0, tmp);
         }
+        return ans;
     }
 }
