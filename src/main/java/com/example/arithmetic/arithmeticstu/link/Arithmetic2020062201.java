@@ -9,10 +9,6 @@ package com.example.arithmetic.arithmeticstu.link;
  */
 public class Arithmetic2020062201 {
 
-    public ListNode detectCycle(ListNode head) {
-
-    }
-
     public ListNode getCycle(ListNode node) {
         ListNode head = node;
         ListNode slow = node;
