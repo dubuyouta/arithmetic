@@ -10,7 +10,7 @@ package com.example.arithmetic.arithmeticstu.link;
 public class Arithmetic2020062201 {
 
     public ListNode detectCycle(ListNode head) {
-
+        return null;
     }
 
     public ListNode getCycle(ListNode node) {
