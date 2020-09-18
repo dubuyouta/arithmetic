@@ -1,6 +1,8 @@
 package com.example.arithmetic.thread;
 
 /**
+ * 死锁
+ *
  * @author xiaobao.chen
  * Create at 2020/9/17
  */
