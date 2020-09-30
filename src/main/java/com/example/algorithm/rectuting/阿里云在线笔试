@@ -1,0 +1,31 @@
+
+阿里云在线笔试 2020-09-18 20:00 在线笔试
+教训：不知道打开链接就是题目，以为会有面试官。不清楚流程，下次一定要问清
+或者碰到问题就写
+
+//评测题目: 无
+同时有N个商品（用long类型的商品id表示），每个商品都可以被任何一个用户（long类型的用户id）订阅，
+每被订阅一次，该商品的订阅数加1，
+同一个用户对同一个商品只能订阅一次 编辑写一个类，
+用3个方法提供以下功能（这3个方法都是在单机多线程环境下调用）：
+1）为指定的用户id订阅指定的商品id
+2) 返回所有商品的订阅总数
+3）根据商品ID返回这个商品的订阅数
+public class GoodsSubscribeManager{
+  Map<Long,List<Long>> goodsSubscribeMap=new HashMap<>();
+  Map<Long,List<Long>> map=new HashMap<>();
+  ReadWriteLock lock=new ReentrantReadWriteLock();
+
+  public void subscribeGoods(long goodsId,long userId){
+     try{
+         lock.writeLock().lockInterruptibly();
+         List<Long> subscribeUserIds=map.get(goodsId);
+         if()
+        }finally{
+         lock.writeLock().unlock();
+        }
+
+  }
+
+}
+

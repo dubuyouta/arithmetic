@@ -1,0 +1,68 @@
+
+2020-09-17 20:00 面试
+
+20:43:20 对方: 使用redis来实现基于优先级的队列
+20:44:36 对方: 1000万条数据的B+树，索引树大概有多高
+20:47:43 对方: 联合索引(a, b, c)，select * from table from a=x, b>y, c=z
+20:50:03 对方: select * from table from a=x, c=z
+20:50:59 对方: synchronized是否可重入
+20:51:58 对方: ThreadPoolExecutor的构造方法参数有哪些
+20:55:28 对方: Spring Bean初始化过程
+20:57:34 对方: 1.Init-Method, 2.PostConstructor和3.InitializingBean的执行顺序
+20:58:53 对方: Spring事务的传播属性有哪些
+
+算法问题：
+
+给定一个整数序列：a1, a2, ..., an，一个「132模式」的子序列 ai, aj, ak 被定义为：当 i < j < k 时，ai < ak < aj。设计一个算法，当给定有 n 个数字的序列时，验证这个序列中是否含有「132模式」的子序列。
+
+输入：整型数组，代表一个整数序列
+输出：布尔值，代表输入的序列中是否包含「132」模式的子序列
+
+示例1:
+输入: [1, 2, 3, 4]
+输出: False
+解释: 序列中不存在132模式的子序列。
+
+示例 2:
+输入: [3, 1, 4, 2]
+输出: True
+解释: 序列中有 1 个132模式的子序列： [1, 4, 2].
+
+示例 3:
+输入: [-1, 3, 2, 0]
+输出: True
+解释: 序列中有 3 个132模式的的子序列: [-1, 3, 2], [-1, 3, 0] 和 [-1, 2, 0]
+
+自己写的误区：
+ public boolean hasSubMode(int[] array){
+        if(array==null||array.length==0){
+            return false;
+        }
+        int start=0,end=array.length-1;
+        for(;start<end;){
+            int tempStart=start;
+            while(tempStart<end&&array[tempStart]>=array[end]){
+                tempStart++;
+            }
+            int tempEnd=end;
+            if(tempStart==end){
+                tempStart=start;
+               while(tempEnd>start&&array
+                     [tempEnd]<=array[start]){
+                tempEnd--;
+               }
+            }
+            if(tempStart==tempEnd){
+                return false;
+            }
+            for(int i=start+1;i<end;i++){
+                if(array[i]>array[start]&&array[i]>array[end]){
+                    return true;
+                }
+            }
+
+        }
+
+    }
+
+    com.kecies.interview.algorithm.test1.array.Test75
