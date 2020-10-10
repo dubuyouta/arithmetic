@@ -1,6 +1,5 @@
 package com.example.algorithm.test3;
 
-import com.kecies.interview.algorithm.test2.string.Test27;
 
 import java.util.Stack;
 
@@ -11,7 +10,7 @@ import java.util.Stack;
 public class StringMatch {
     /**
      * 字符串配对
-     * {@link Test27}
+     * {@link}
      * 题目要求
      */
 

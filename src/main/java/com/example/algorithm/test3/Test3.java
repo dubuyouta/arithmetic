@@ -1,6 +1,6 @@
 package com.example.algorithm.test3;
 
-import com.kecies.interview.algorithm.bo.ListNode;
+import com.example.algorithm.bo.ListNode;
 
 /**
  * @author heshineng

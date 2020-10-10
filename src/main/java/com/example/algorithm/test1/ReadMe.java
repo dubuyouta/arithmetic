@@ -1,21 +1,6 @@
 package com.example.algorithm.test1;
 
-import com.kecies.interview.algorithm.test1.array.*;
-import com.kecies.interview.algorithm.test1.fibonacci.Test10;
-import com.kecies.interview.algorithm.test1.fibonacci.Test7;
-import com.kecies.interview.algorithm.test1.fibonacci.Test8;
-import com.kecies.interview.algorithm.test1.fibonacci.Test9;
-import com.kecies.interview.algorithm.test1.link.*;
-import com.kecies.interview.algorithm.test1.matrix.Test1;
-import com.kecies.interview.algorithm.test1.matrix.Test18;
-import com.kecies.interview.algorithm.test1.matrix.Test67;
-import com.kecies.interview.algorithm.test1.matrix.Test68;
-import com.kecies.interview.algorithm.test1.number.*;
-import com.kecies.interview.algorithm.test1.stack.Test19;
-import com.kecies.interview.algorithm.test1.stack.Test20;
-import com.kecies.interview.algorithm.test1.stack.Test5;
-import com.kecies.interview.algorithm.test1.string.*;
-import com.kecies.interview.algorithm.test1.tree.*;
+
 
 public class ReadMe {
     /**

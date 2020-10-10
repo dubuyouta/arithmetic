@@ -1,7 +1,7 @@
 package com.example.algorithm.test2.tree;
 
 import com.alibaba.fastjson.JSON;
-import com.kecies.interview.algorithm.bo.TreeNode;
+import com.example.algorithm.bo.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

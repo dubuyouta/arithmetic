@@ -1,6 +1,6 @@
 package com.example.algorithm.test1.link;
 
-import com.kecies.interview.algorithm.bo.RandomListNode;
+import com.example.algorithm.bo.RandomListNode;
 
 /**
  * @author: heshineng

@@ -13,7 +13,30 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] a = {2, 5, 7, 9, 11, 14, 20, 25, 30};
         System.out.println(binarySearch(a, 5));
+        System.out.println(binarySearch1(a, 5));
         System.out.println(binarySearch(a, 0, a.length - 1, 5));
+    }
+
+    public static int binarySearch1(int[] array, int target) {
+        if (array == null || array.length <= 0) {
+            return -1;
+        }
+        int left = 0;
+        int right = array.length - 1;
+        /**防止int类型数据长度溢出*/
+        int mid = left + (right - left) / 2;
+        /**<= 防止特殊情况出现*/
+        while (left <= right) {
+            if (target == array[mid]) {
+                return mid;
+            } else if (target < array[mid]) {
+                right = mid - 1;
+            } else if (target > array[mid]) {
+                left = mid + 1;
+            }
+            mid = left + (right - left) / 2;
+        }
+        return -1;
     }
 
     public static int binarySearch(int[] a, int r) {

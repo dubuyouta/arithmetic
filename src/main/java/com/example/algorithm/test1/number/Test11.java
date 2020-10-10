@@ -1,6 +1,5 @@
 package com.example.algorithm.test1.number;
 
-import com.kecies.interview.algorithm.test1.ReadMe;
 
 /**
  * @author: heshineng
@@ -13,7 +12,7 @@ public class Test11 {
      * <p>
      * 主要要利用位运算 ^ | & !
      * <p>
-     * 参照 {@link ReadMe}
+     * 参照 {@link }
      * <p>
      * 按位与 & 如果两个相应的二进制位都为1，则该位的结果值为1，否则为0
      * 按位或 | 两个相应的二进制位中只要有一个为1，该位的结果值为1

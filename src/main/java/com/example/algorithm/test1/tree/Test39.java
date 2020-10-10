@@ -1,6 +1,6 @@
 package com.example.algorithm.test1.tree;
 
-import com.kecies.interview.algorithm.bo.TreeNode;
+import com.example.algorithm.bo.TreeNode;
 
 /**
  * @author: heshineng

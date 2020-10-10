@@ -1,6 +1,7 @@
 package com.example.algorithm.test1.tree;
 
-import com.kecies.interview.algorithm.bo.TreeLinkNode;
+
+import com.example.algorithm.bo.TreeLinkNode;
 
 import java.util.Stack;
 

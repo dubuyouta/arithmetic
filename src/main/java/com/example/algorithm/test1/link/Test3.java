@@ -1,7 +1,7 @@
 package com.example.algorithm.test1.link;
 
 import com.alibaba.fastjson.JSON;
-import com.kecies.interview.algorithm.bo.ListNode;
+import com.example.algorithm.bo.ListNode;
 
 import java.util.ArrayList;
 import java.util.Stack;

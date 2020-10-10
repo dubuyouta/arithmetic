@@ -1,15 +1,5 @@
 package com.example.algorithm.test2;
 
-import com.kecies.interview.algorithm.test2.array.*;
-import com.kecies.interview.algorithm.test2.graph.*;
-import com.kecies.interview.algorithm.test2.link.*;
-import com.kecies.interview.algorithm.test2.matrix.*;
-import com.kecies.interview.algorithm.test2.queue.*;
-import com.kecies.interview.algorithm.test2.stack.*;
-import com.kecies.interview.algorithm.test2.string.*;
-import com.kecies.interview.algorithm.test2.thread.*;
-import com.kecies.interview.algorithm.test2.tree.*;
-
 /**
  * @author: heshineng
  * @createdBy: 2020/7/16 17:40
