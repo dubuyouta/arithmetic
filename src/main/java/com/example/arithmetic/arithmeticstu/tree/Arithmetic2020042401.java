@@ -147,7 +147,7 @@ public class Arithmetic2020042401 {
             theFirstTraversal(node.getLeft());
         }
         if (node.getRight() != null) {
-            theMiddleTraversal(node.getRight());
+            theFirstTraversal(node.getRight());
         }
     }
 
@@ -162,7 +162,7 @@ public class Arithmetic2020042401 {
         }
         printNode(node);
         if (node.getRight() != null) {
-            theFirstTraversal(node.getRight());
+            theMiddleTraversal(node.getRight());
         }
     }
 
