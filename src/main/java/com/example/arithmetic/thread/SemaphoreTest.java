@@ -31,7 +31,7 @@ public class SemaphoreTest {
             }
         });
 
-        semaphore.acquire(2);
+        semaphore.acquire(3);
 
         System.out.println("all child thread is over!");
 
